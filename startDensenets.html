@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<title>Modelling</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:200px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="https://static.thenounproject.com/png/995090-200.png" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>APP_NAME</b></h4><br>
+
+  </div>
+  <div class="w3-bar-block">
+    <a href="http://localhost:5000/" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa  fa-home fa-fw w3-margin-right"></i>HOME</a>
+    <a href="http://localhost:5000/start" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-globe w3-margin-right"></i>MODEL</a>
+    <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-github fa-fw w3-margin-right"></i>GIT</a>
+    <a href="http://localhost:5000/authors" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>AUTHORS</a>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+<!--  Image if any required  <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>-->
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>APP_NAME</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <button class="w3-button w3-white buttonRound w3-text-teal" onclick="divVisibility('Div1');"><i class="fa w3-margin-center">Data</i></button>
+<!--      <a href="http://localhost:5000/showFeatures" class="w3-button w3-white buttonRound"><i class="fa w3-margin-center"></i>Feature Extraction</a>-->
+      <a href="http://localhost:5000/showPreProcessing" class="w3-button w3-white buttonRound"><i class="fa w3-margin-center"></i>Processing</a>
+      <a href="http://localhost:5000/showClassification" class="w3-button w3-white buttonRound"><i class="fa w3-margin-center"></i>Prediction</a>
+    </div>
+    </div>
+  </header>
+
+    <style>
+        .divStyle {
+          margin-top: 20px;
+          margin-right: 60px;
+        }
+
+        .buttonRound{
+            border-radius: 4px;
+            text-align: center;
+        }
+
+
+        .right{
+            right:0px;
+        }
+
+        .transparent{
+            background-color: Transparent;
+         }
+
+         .margin{
+            margin-top: 30px;
+         }
+
+         .right_margin{
+            margin_right: 5px;
+         }
+    </style>
+
+
+    <!-- Dataset division -->
+   <div id="Div1" class="divStyle w3-row-padding w3-container">
+       <div class="dropdown">
+       <button class="w3-button w3-black buttonRound fa-upload" onclick="document.getElementById('ticketModal1').style.display='block'" >Upload Patient File<i class="fa  fa-upload fa-fw w3-margin-left"></i><span class="caret"></span></button>
+
+
+<!--       <button class="w3-button w3-black w3-right w3-margin-bottom buttonRound fa-upload">Download<i class="fa  fa-download fa-fw w3-margin-left"></i></button>-->
+       <a href="http://localhost:5000/download" onclick="w3_close()" class="w3-button w3-black w3-right buttonRound fa-upload">Download<i class="fa  fa-download fa-fw w3-margin-left"></i></a>
+       </div>
+
+       <div class="margin">{{data_frame | safe}}</div>
+
+   </div>
+
+    <!-- Modal 1-->
+        <div id="ticketModal1" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+          <header class="w3-container w3-black w3-center w3-padding-32">
+            <span onclick="document.getElementById('ticketModal1').style.display='none'"
+           class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <h2 class="w3-wide"><i class="fa fa-database w3-margin-right"></i>Dataset</h2>
+          </header><br>
+          <div class="w3-container">
+            <p><label><i class="fa"></i> Select data of patient to be uploaded: </label></p>
+            <form method="POST" action="/upload_densenet_file" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <br>
+                <p><label>Select the column number for: </label></p>
+                <div class="w3-row">
+                    <div class="w3-quarter">
+                        Heat rate:<br>Respiration rate:<br>SpO2:<br>Blood pressure:<br>Diastolic Blood pressure:<br>
+                    </div>
+                    <div class="w3-threequarter">
+                    <!--Heart rate-->
+                        <select name="hr_options_file" id="hr_options_file">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+                        <!--Respiration rate-->
+                        <select name="resp_options_file" id="resp_options_file">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+                        <!--Spo2 rate-->
+                        <select name="spo2_options_file" id="spo2_options_file">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+                        <!--BP-->
+                        <select name="bp_options_file" id="bp_options_file">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+                        <!--BP Diastole-->
+                        <select name="bp_dias_options_file" id="bp_dias_options_file">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+
+                    </div>
+                </div>
+                <br>
+
+                <p><label><i class="fa"></i> Data Format </label></p>
+                <input class="w3-input w3-border " type="text" placeholder=".csv">
+                <button type="submit" value="Upload" class="w3-button w3-block w3-black w3-padding-16 w3-section w3-right"> LOAD <i class="fa fa-check"></i></button>
+            </form>
+              <br>
+            <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal1').style.display='none'">Close <i class="fa fa-remove"></i></button>
+<!--            <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>-->
+          </div>
+        </div>
+        </div>
+
+
+    <!-- Upload the folder with files to be appended -->
+    <!-- Modal 2-->
+        <div id="ticketModal2" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+          <header class="w3-container w3-black w3-center w3-padding-32">
+            <span onclick="document.getElementById('ticketModal2').style.display='none'"
+           class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <h2 class="w3-wide"><i class="fa fa-database w3-margin-right"></i>Dataset</h2>
+          </header><br>
+          <div class="w3-container">
+            <p><label>Select files of patients to be appended: </label></p>
+<!--            <input class="w3-input w3-border" type="text"><br>-->
+            <form method="POST" action="/upload_folder" enctype="multipart/form-data">
+                <input type="file" name="file[]" multiple="">
+
+                <br>
+                <p><label>Select the column number for: </label></p>
+                <div class="w3-row">
+                    <div class="w3-quarter">
+                        Heat rate:<br>Respiration rate:<br>SpO2:<br>Blood pressure:<br>Diastolic Blood pressure:<br>
+                    </div>
+                    <div class="w3-threequarter">
+                    <!--Heart rate-->
+                        <select name="hr_options" id="hr_options">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+                        <!--Respiration rate-->
+                        <select name="resp_options" id="resp_options">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+                        <!--Spo2 rate-->
+                        <select name="spo2_options" id="spo2_options">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+                        <!--BP-->
+                        <select name="bp_options" id="bp_options">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+                        <!--BP Diastole-->
+                        <select name="bp_dias_options" id="bp_dias_options">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                        </select><br>
+
+
+                    </div>
+                </div>
+                <br>
+
+                <p><label> Data Format </label></p>
+                <input class="w3-input w3-border " type="text" placeholder=".csv">
+                <button type="submit" value="Upload" class="w3-button w3-block w3-black w3-padding-16 w3-section w3-right"> LOAD <i class="fa fa-check"></i></button>
+            </form>
+              <br>
+            <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal2').style.display='none'">Close <i class="fa fa-remove"></i></button>
+<!--            <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>-->
+          </div>
+        </div>
+        </div>
+
+
+
+</div>
+
+
+
+
+    <script>
+    function dataFunc() {
+      var x = document.getElementById("dataDiv");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function processFunc(){
+        var x = document.getElementById("processDiv");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+    }
+
+
+    var divs = ["Div1"];
+    var visibleDivId = null;
+    function divVisibility(divId) {
+      if(visibleDivId === divId) {
+        visibleDivId = null;
+      } else {
+        visibleDivId = divId;
+      }
+      hideNonVisibleDivs();
+    }
+    function hideNonVisibleDivs() {
+      var i, divId, div;
+      for(i = 0; i < divs.length; i++) {
+        divId = divs[i];
+        div = document.getElementById(divId);
+        if(visibleDivId === divId) {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+    }
+
+
+    $(document).ready(function(){
+      $('.dropdown a.test').on("click", function(e){
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+      });
+    });
+    </script>
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+

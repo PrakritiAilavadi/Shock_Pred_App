@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>APP_NAME</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+
+  <!-- The Authors Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" align="center" id="authors">
+    <h2 class="w3-wide w3-center">AUTHORS</h2><br>
+
+
+      <style>
+
+
+        .column {
+                    float: left;
+                    padding: 10px;
+                    height: 200px;
+                }
+
+         .left {
+                    width: 200px;
+                }
+
+         .right {
+                    width: 390px;
+                }
+
+         .format {
+                    background-color: black;
+                    color: white;
+                    margin: 20px;
+
+                 }
+
+          .row:after {
+                     content: "";
+                     display: table;
+                     clear: both;
+                       }
+          .random {
+                    color: black
+          }
+
+        </style>
+
+
+
+        <!-- Tav Sir -->
+        <div class="row">
+        <div class="column left format" >
+        <img src="https://www.iiitd.ac.in/sites/default/files/public/faculty/tavpritesh.jpg" width="160" height="180" align="center">
+        </div>
+        <div class="column right format" align="left">
+        <h3>Tavpritesh Sethi</h3>
+        <p>Visiting Assistant Professor, Stanford Medicine<br>Assistant Professor, IIIT-Delhi<br>tavsethi@stanford.edu | tavpriteshsethi@iiitd.ac.in</p>
+        <p class="random">
+            <a href="mailto:tavsethi@stanford.edu">
+                <img &nbsp src="http://icons.iconarchive.com/icons/johnathanmac/mavrick/512/Mail-icon.png" width="30" height="30"></a>
+            ....<a href="mailto:tavpriteshsethi@iiitd.ac.in">
+                <img &nbsp src="http://icons.iconarchive.com/icons/johnathanmac/mavrick/512/Mail-icon.png" width="30" height="30"></a></nbsp></nbsp>
+            ....<a href="https://github.com/SAFE-ICU?tab=repositories">
+                <img &nbsp src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAilBMVEUAAAD///+amprh4eHb29v7+/vv7+/r6+v39/dKSkrU1NTz8/OysrL8/Pzk5OTFxcW+vr4yMjIYGBinp6eJiYlsbGympqZAQEBdXV12dnaQkJBUVFSCgoLNzc0fHx83NzdDQ0MlJSVxcXELCwt6enq3t7eXl5dOTk4tLS1aWlpkZGQaGhojIyOEhITYCIgRAAALMklEQVR4nO1d6XqqMBB1B3dwba0LStWq7fu/3i2lVpaEnAkJid93z2/RHElmn0mt9h//gWOy94Pz5Rz4+4nppajE7fK1mHq9Tj2LTs+bLr4uN9MLlEe4vDa81jDHLIthy2tcl6Hp5RIxuZ56jpBbEk7vdH2avXudNl0Suzvc5vRqevFCTN7HUuQeGL9b/Cp3q15JejF6q51pKky8b8RSBcVw826aThbBQO7o8eEOAtOkEliPFNOLMVqbJhZje8prc1XonLam6dX2U9XbMw13ujfKb+tppRfDM/cet4sK+EVYGOLY0Ls/k3AbBvit9ckXFjpVy9WgWSm/CM2gQn5hVQcwjUVlLtac5hipgzOvhF9Y1nsog3EFr3HeNkiwXm9rf40Do/wiDLTyW+oxsWkYLfURXJkm94uVLoImRUwaYy38/OqVPB/ND/UE36qzQhG4b6oJrk1TykGxoWpeSeShVG3YI2OSUChv1IRB1aOniF/YMs2Ei5YSglubtEQWTQXJuYkpVwmDU9rZCO0m+E2xLEObt2iMkmfRVimaRCmJujG9eggbeYJ2Kvo8pFW/mYiaDBZyBN9Nr5sAqYRq1/SqSejSCU7s8gdFcOn1DfYao2yQ1eLR9IrJONIIPpOUuYMkbfbCr+t0Kj2nbscRG8iUfLjoEK6X4c3vHo6VHFZ3s3rxb7VweRJ8kHAURap+9HjZK92muXf984+2om0DK/4X0a+mvmk/7Ssik8dollqY0Ip8ARkK89fZWOW7nhc5zi74IHqigxEURg4ZTueb8rITd8Eo3xNKNyjCGAh/nPk14VQJsV8M2cUXYm8uABiKd9yB/eBtqqw4ccCxwWbCJ5tigkAGjfusryY07nEThB/ih4WZtw9xErvob1qyNGS/NT4u1tfLOdj5/ofv74Lz5bpeHMctlhRuFrkJYjOjLcpKAXGLYgNwlviL2o7XOHwWfvzz0PCc5COzwo8DUQdBTEOoCr9xKv6KfbyKkbfGfbbu2ovz52PBG0DEWbFSRBSbMHP32vJe6bn25avXehV9aA6sr1DYQC6FyYJPH1lg0f8EBbhNdgtskQUWhMGhWgvQMtKDEKpX4mqMEDKhAZ2qEdAu6/PSNVh8VE3OThaYjc8ruMWMrmdg2GY/LDb6fmB2l4JlZ1/Mh8Gy5qdgyBSnaHiNe4yrQIjGv1g6EY4qFRuaevGJLpIhLRCLNIbG4kchlvAqL7ln8VwhxwGuBMJIzR9yOcUb/KjmIt1iEFzsrHFJKI41KUwJQb2so0kpbzbCLQZhlZkXIQ6wJSD04rThlbLMtEQkhZD01CAjIJVOpOUFKTDfNuUD70m9Hv3ko0hw4AFXQ5E1hA9aRi85voAW5zSn8nGFHyG5TUmNIs+h8evJJCCtsMREO+cDpCqm4O+xBuEpVZXHsqCknRsyTw1NSZk7fEL658/BmBD+FvNjDr4Iq73bpoTSErMOfgyCbXovQCHoirNRbjHe8OXe9QWuKzyj1O7AM+p3fYH/Jybd+wcIbkL8AG6ylSg3Vgq8ODvuGsa1YT72YQYXeMWxRoS1oQ2CNAYsTmONCA+40NZ+SwYcc/lJlC1hp8ueMWOwjdKOZOMV/bRpizQJuNMl8hFhK8ieTUrYplGKBq53liiH1wbY34tKY9AXXr4PTiHglrroaFE+aw/g90LI5pj17bOAzZRPrEIlgl2TDGGPz8fPrC0mWww4GdiF7W5hzV+1AGooY8zR+oS6a5pTBmhweAZV+0Xoi3+0UqB5iCkcwijdM60YqJIbwOkcs4VCeaAO1Bj2l+1S+LjK3xA+aRfwN4N6+M/6DlvwfrbtHKJvpgnLpJH4RysFGuR1YL1itDSYATS61K+h1s+zavw2WDb7vAyH8Cef1S7tw5Km7ZvmlIKPni4HDx8rH3JXCnCKrYnH9E2WYOQBF2X08DyO+fx2EvCUww1eKvakkagxnlC1y/SGt56Hh7ztMtvgzPwRL1MwVq/HAl7DNyCUUdmkLs7wqhuEYhqbhCk+MPadUJ1irjQ4D7xY+K22gz9rk+2N1zT7eGbGlmqaCPhrqW/xwKNNOl80i+eBKMyLl17aE4zCB1a2SJ822qeeBKFcNHorhMpEW2oV0GxSPa5OJPSh2GK4ESpMo/4e3Dywo7yU1sIUrXhC6Jcx2Zj3AKFev/9Tx0VotmjbcPMr3Atcv58rSsOMYHJLJaDcIxJvOoJkssJyo1wWFrdZEirDea38VYI0tPLX46M8Yj4wTGok/H2GNLR7apQesfHpbmdS2p7qQ7Mexo40E+7uKxB8kbrpVCltSPzfYELa8ErJ4dlKQNpuCclPHOtoLiRFEvvJFh9SE/i3PDWVhtoRJ/s+Ui1wBeYvDJUL34gXgw4Tb4I6D9hIbwn5MpGkTKQd4Ihi9b0XH+TbUpJGNK0LPIJTdYw/oE8rTg2xpd9F4qJTidXgQJ/+mg6cyVyrVmVwUWaEb6YwXeIb6puqtEZXajJ65kvkZjlX4xDLzWDOdvQSrYU7HP2n8SA5wD9necneXNXTa8PNZYeh56u25a/N2ejrxJjL3zeVl4PsBobmzN9OPi+r4sKApp5riNclbkRzGRkIVsjt4X6Eq8Kf6yxUO8bdQanLo1mRXZYfnIrKnIp/srdS16D41ih7FwFTkbEyx6mozIdIpTiDL8a4fyKC2ZHoQzDAHv7ADGakT9gcsJ02i5etHLdwPx8ousqOY4swxUl6OBto4LutzeDrBd+1b9fZcdNUdvEAt36LPaogLXZvhAOCpxtV3/DG1V/sLTJKfX4CJ3IoESuyg1oIfjqe122Zkjd70IqiZeKUXkRYcDx4wjK1rzETltjrpvK+06IpOtyh7imKUDqOWlJMG/tXiEJRzj0Pqf8F+L/plSnKbgQVeOZcZZsUjMAoDbpzTBowWgBRcw8/O5c8vkJ/WSbcqOjSKGFXPTdgkFy08IqC4rtU2FBzX584ccTfLEmdIZCnQxm7ba+EYSD+Ib7yTXrzxcl/uap3FTYpFADknofUBii0QuQCjQoMG+z88xOmKUejaD1yPr8ClQg6b9yClXRdGz+K3JbzEnelvPoIsK3PPRBpQ+XMM8JlpxOU9XxxM4O7T7NfwXzbnYZsLLysbUrYOtwNmLXaw1Pmf3emJWLEJQ03UrsEr1eIYbZfTpuR843mZjqbS8YvflHu6j3ihcA806YUAxFKXRJJrYLhdaFqLYQuE8ygd/Fy5ktqrWsro/IlUgucngadZcIlGErl+TihE435NHmGcj1ZIVuhs3IeiiDNcCRZ4DNh2xj66oVkGXaka184I8McXQWYkgzLDFrjBFBdPflCWYalcl680XZ6BnvLMSwp+nizC1wdql+KYelZD9wRterTvlIMFTQPFERkRtMDy9TeyqZJJRjKBPVyENTXOptjY3Z4OXfPb5frbOC15OvB6AwVXT1Fjp9UxvAq/k4M+JT3ShkOFRbyBLQYUTUM3UAdwW93kRQkqoRhR3EN74QSkK6CYU99HTYhiCLbc0JgqMVNxXND+hlqGkzdRQ+jboYdbQPwt+Bh1MywVy5mqWINsj2K2LdrrqBfIgVDOhmO9Pc/AkFNjQwraQ08CxMo2hg6VQ11EEXfZZWViGGFPcjdYqGqh2EvUElBiEORxNHBcFT9ZMoC35+Y5/pDAUMlvjwZXEtVOUNjM1V2R7bfqJZh+1i+PF4e/oLFUSXD9sL4eN9TvmZYVqrnCx9cG8bF1GrrrFyVjYBlkwgje0Y1vhyTXbry49uT1QP9Y7V9uCLcXh9GgLxp9Sjk6b3ac1PfH7aNHw+5Vcb493/+p05DpwdYCrduUDZ9GgZdG8Zt/YdN+Aft1bC9QFcjLQAAAABJRU5ErkJggg==" width="30" height="30"></a>
+            ....<a href="https://www.facebook.com/tavpritesh.sethi">
+                <img &nbsp src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-512.png" width="30" height="30"></a></nbsp></nbsp>
+            ....<a href="https://in.linkedin.com/in/tavpritesh">
+                <img &nbsp src="http://aux.iconspalace.com/uploads/linkedin-round-icon-256.png" width="30" height="30"></a></nbsp></nbsp>
+            ....<a href="https://twitter.com/tavpritesh">
+                <img &nbsp src="http://www.stickpng.com/assets/images/58e9196deb97430e819064f6.png" width="30" height="30"></a>
+        </p>
+        </div>
+        </div><br>
+
+      <!-- Aditya -->
+       <div class="row">
+        <div class="column left format" >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwyGnV_y2eK9V99dCB_l0c98zNzRvpmvmRDbY7C8g3Wm18f3PLbQ" width="160" height="180" align="center">
+        </div>
+        <div class="column right format" align="left">
+        <h3>Aditya Nagori</h3>
+<!--        <p>Visiting Assistant Professor, Stanford Medicine<br>Assistant Professor, IIIT-Delhi<br>tavsethi@stanford.edu | tavpriteshsethi@iiitd.ac.in</p>-->
+        </div>
+        </div><br>
+
+
+      <br>
+<!--      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">-->
+<!--        <div class="w3-third w3-margin-bottom">-->
+<!--            <img src="https://www.iiitd.ac.in/sites/default/files/public/faculty/tavpritesh.jpg"> Tavpritesh Sethi-->
+<!--          <img src="/w3images/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">-->
+<!--          <div class="w3-container w3-white">-->
+<!--            <p><b>New York</b></p>-->
+<!--            <p class="w3-opacity">Fri 27 Nov 2016</p>-->
+<!--            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>-->
+<!--            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="w3-third w3-margin-bottom">-->
+<!--          <img src="/w3images/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">-->
+<!--          <div class="w3-container w3-white">-->
+<!--            <p><b>Paris</b></p>-->
+<!--            <p class="w3-opacity">Sat 28 Nov 2016</p>-->
+<!--            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>-->
+<!--            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+    </div>
+<!--    <div class="w3-row w3-padding-32">-->
+<!--      <div class="w3-col m6 w3-large w3-margin-bottom">-->
+<!--        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>-->
+<!--        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>-->
+<!--        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>-->
+<!--      </div>-->
+<!--      <div class="w3-col m6">-->
+<!--        <form action="/action_page.php" target="_blank">-->
+<!--          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">-->
+<!--            <div class="w3-half">-->
+<!--              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">-->
+<!--            </div>-->
+<!--            <div class="w3-half">-->
+<!--              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">-->
+<!--          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+<!--&lt;!&ndash; Image of location/map &ndash;&gt;-->
+<!--<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">-->
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-light-grey w3-xlarge">
+    <h3>Contributors</h3>
+    <p>xxxx</p>
+</footer>
+<footer class="w3-container w3-center w3-opacity w3-light-grey w3-xlarge">
+    <h3>References</h3>
+    <p>xxxx</p>
+</footer>
+
+<!--  <i class="fa fa-facebook-official w3-hover-opacity"></i>-->
+<!--  <i class="fa fa-instagram w3-hover-opacity"></i>-->
+<!--  <i class="fa fa-snapchat w3-hover-opacity"></i>-->
+<!--  <i class="fa fa-pinterest-p w3-hover-opacity"></i>-->
+<!--  <i class="fa fa-twitter w3-hover-opacity"></i>-->
+<!--  <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+<!--  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
+<footer class="w3-container w3-center w3-opacity w3-light-grey w3-xlarge">
+    <h3>Acknowledgements</h3>
+    <p>xxxx</p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
