@@ -70,5 +70,9 @@ It is the main python flask file that drives the application, links to the HTML 
 2. AHE_rf.ipynb
 3. los.ipynb
 4. tsfresh_si_cohort.ipynb
+5. mean_sd.ipynb
+6. LSTM-FCN-Attention-Shock.ipynb
+7. age_gender.ipynb
+8. app_script.ipynb
 
 ### **Note: This app contains the initial versions, hence is not ready to use. Further modifications and additions were done by TavLab members Aditya Nagori, Harsh Bandhey. The up and running app could be found at https://github.com/SAFE-ICU/ShoQPred
